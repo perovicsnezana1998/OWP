@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moj profil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid" style="height: 51px;">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <p class="navbar-text navbar-left"><a href="index.html" class="navbar-link">SnekMovies</a></p>
+                <ul id="nav">
+                    <a href="index.html"><li class="navbar-text">Naslovna</li></a>
+                    <a href="projections.html"><li class="navbar-text">Repertoar</li></a>
+                    <a href="profile.html"><li class="navbar-text">Profil</li></a>
+                    <a href=""><li class="navbar-text">O nama</li></a>
+                    <a href=""><li class="navbar-text">Kontakt</li></a>
+                </ul>
+                <p class="navbar-text navbar-right" id="login"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></p>
+                <p class="navbar-text navbar-right" id="register"><a href="#" data-toggle="modal" data-target="#registrationModal">Registracija</a></p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin: 20px !important;">
+            <div class="col-md-4" style="text-align: center;">
+                <img id="profileImg" src="images/profile.jpg" alt="">
+            </div>
+            <div class="col-md-4" style="text-align: center;">
+                <table class="table" style="color: #fff;">
+                    <tr>
+                        <td><h4>Ime:</h4></td>
+                        <td><h4>Petar</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Prezime:</h4></td>
+                        <td><h4>Petrovic</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Korisnicko ime:</h4></td>
+                        <td><h4>pera123</h4></td>
+                    </tr>
+                </table>
+                <a href="#" type="button" class="btn btn-warning" data-toggle="modal" data-target="#changeProfile">Izmeni profil</a>
+    
+            </div>
+        </div>
+    
+        <h3 style="color: #fff;">Moje karte:</h3>
+    
+        <div class="row">
+            <table class="table table-bordered" style="color: #fff;">
+                <th>
+                    <td>Naziv filma</td>
+                    <td>Datum projekcije</td>
+                    <td>Vreme projekcije</td>
+                    <td>Tip projekcije</td>
+                    <td>Sala</td>
+                    <td>Sediste</td>
+                    <td>Cena karte</td>
+                </th>
+                <tr>
+                    <td>1</td>
+                    <td>John Wick 3</td>
+                    <td>26.02.2020.</td>
+                    <td>18:00</td>
+                    <td>3D</td>
+                    <td>3</td>
+                    <td>I3</td>
+                    <td>370RSD</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Me before you</td>
+                    <td>18.02.2020.</td>
+                    <td>18:00</td>
+                    <td>2D</td>
+                    <td>5</td>
+                    <td>A8</td>
+                    <td>370RSD</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>John Wick 3</td>
+                    <td>26.02.2020.</td>
+                    <td>18:00</td>
+                    <td>3D</td>
+                    <td>3</td>
+                    <td>I3</td>
+                    <td>370RSD</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Me before you</td>
+                    <td>18.02.2020.</td>
+                    <td>18:00</td>
+                    <td>2D</td>
+                    <td>5</td>
+                    <td>A8</td>
+                    <td>370RSD</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="modal fade" id="changeProfile" tabindex="-1" role="dialog" aria-labelledby="changeProfile">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="changeProfile">Izmeni profil</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="control-label">Ime:</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="control-label">Prezime:</label>
+                            <input type="text" class="form-control" id="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-name" class="control-label">Korisnicko ime:</label>
+                            <input type="text" class="form-control" id="user-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label">Lozinka:</label>
+                            <input type="password" class="form-control" id="password"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label">Ponovite lozinku:</label>
+                            <input type="password" class="form-control" id="password"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Odustani</button>
+                    <button type="button" class="btn btn-warning">Sacuvaj</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="container-fluid" id="footer">
+        <footer class="col-md-12">
+            <div class="col-md-4 col-sm-12">
+                <h3>O nama</h3>
+                <div id="info">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia recusandae cum optio eaque, vero aliquid rem nihil, facilis debitis quos fuga saepe similique explicabo iste voluptas, accusamus necessitatibus molestias officiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ea autem voluptate debitis eius qui, recusandae ducimus ipsum optio et doloribus. Blanditiis rem voluptas inventore, perferendis magni facilis obcaecati quia!</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h4>Pronadjite nas i na:</h4>
+                <a href="https://www.facebook.com"><img class="icon" src="images/facebook.png" alt=""></a>
+                <p>Facebook-u</p>
+                <a href="https://www.instagram.com"><img class="icon" src="images/instagram.png" alt=""></a>
+                <p>Instagramu</p>
+                <a href="https://www.twitter.com"><img class="icon" src="images/twitter.png" alt=""></a>
+                <p>ili Twitter-u</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <br>
+                <div id="info">
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    <p>Bul. Mihajla Pupina 3, 21000 Novi Sad, Srbija</p>
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <p style="margin-bottom: 0;">Tel: +381 (0) 21 447 690</p>
+                    <p>Fax: +381 (0) 21 521 942</p>
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p>office@snekmovies.com</p>
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                    <p>Radno vreme: 09-23h</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    
+</body>
+</html>

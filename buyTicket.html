@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projekcija</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container-fluid" style="height: 51px;">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <p class="navbar-text navbar-left"><a href="index.html" class="navbar-link">SnekMovies</a></p>
+                <ul id="nav">
+                    <a href="index.html"><li class="navbar-text">Naslovna</li></a>
+                    <a href="projections.html"><li class="navbar-text">Repertoar</li></a>
+                    <a href="profile.html"><li class="navbar-text">Profil</li></a>
+                    <a href="admin.html"><li class="navbar-text">Admin</li></a>
+                    <a href=""><li class="navbar-text">Kontakt</li></a>
+                </ul>
+                <p class="navbar-text navbar-right" id="login"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></p>
+                <p class="navbar-text navbar-right" id="register"><a href="#" data-toggle="modal" data-target="#registrationModal">Registracija</a></p>
+            </div>
+        </nav>
+    </div>
+
+    <h3 style="text-align: center; color: #fff;">Vasa karta:</h3>
+
+    <div class="container" id="ticketTable">
+        <div class="row ">
+            <div class="col-md-8 col-md-offset-4">
+                <table id="table">
+                    <tr>
+                        <td style="text-align: right; border-right: 1px solid rgb(168, 209, 255);"><h4>Naziv filma:</h4></td>
+                        <td style="text-align: left;"><h4>Me before you</h4></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;  border-right: 1px solid rgb(168, 209, 255);"><h4>Datum projekcije:</h4></td>
+                        <td style="text-align: left;"><h4>18.02.2020.</h4></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;  border-right: 1px solid rgb(168, 209, 255);"><h4>Vreme projakcije:</h4></td>
+                        <td style="text-align: left;"><h4>18:00</h4></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;  border-right: 1px solid rgb(168, 209, 255);"><h4>Tip projekcije:</h4></td>
+                        <td style="text-align: left;"><h4>2D</h4></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;  border-right: 1px solid rgb(168, 209, 255);"><h4>Cena karte:</h4></td>
+                        <td style="text-align: left;"><h4>370</h4></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;  border-right: 1px solid rgb(168, 209, 255);"><h4>Sala:</h4></td>
+                        <td style="text-align: left;"><h4>5</h4></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;  border-right: 1px solid rgb(168, 209, 255);"><h4>Sediste:</h4></td>
+                        <td style="text-align: left;"><h4>A8</h4></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center; margin-bottom: 20px;">
+            <a href="#" class="btn btn-warning" role="button" id="buy">Kupi kartu</a>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="footer">
+        <footer class="col-md-12">
+            <div class="col-md-4 col-sm-12">
+                <h3>O nama</h3>
+                <div id="info">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia recusandae cum optio eaque, vero aliquid rem nihil, facilis debitis quos fuga saepe similique explicabo iste voluptas, accusamus necessitatibus molestias officiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ea autem voluptate debitis eius qui, recusandae ducimus ipsum optio et doloribus. Blanditiis rem voluptas inventore, perferendis magni facilis obcaecati quia!</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h4>Pronadjite nas i na:</h4>
+                <a href="https://www.facebook.com"><img class="icon" src="images/facebook.png" alt=""></a>
+                <p>Facebook-u</p>
+                <a href="https://www.instagram.com"><img class="icon" src="images/instagram.png" alt=""></a>
+                <p>Instagramu</p>
+                <a href="https://www.twitter.com"><img class="icon" src="images/twitter.png" alt=""></a>
+                <p>ili Twitter-u</p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <br>
+                <div id="info">
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    <p>Bul. Mihajla Pupina 3, 21000 Novi Sad, Srbija</p>
+                    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                    <p style="margin-bottom: 0;">Tel: +381 (0) 21 447 690</p>
+                    <p>Fax: +381 (0) 21 521 942</p>
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <p>office@snekmovies.com</p>
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                    <p>Radno vreme: 09-23h</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="js/ticket.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    
+    
+</body>
+</html>
