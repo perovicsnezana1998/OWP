@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Movie {
 
-	private enum Genre{
+	public enum Genre{
 		horror, 
 		trailer,
 		action
@@ -16,12 +16,12 @@ public class Movie {
 	private ArrayList<String> actors;
 	private Genre genre;
 	private int duration;
-	private String distributer;
+	private String distributor;
 	private String country;
 	private int year;
 	private String description;
 	
-	public Movie(String name, String director, ArrayList<String> actors, Genre genre, int duration, String distributer,
+	public Movie(String name, String director, ArrayList<String> actors, Genre genre, int duration, String distributor,
 			String country, int year, String description) {
 		super();
 		this.name = name;
@@ -29,10 +29,19 @@ public class Movie {
 		this.actors = actors;
 		this.genre = genre;
 		this.duration = duration;
-		this.distributer = distributer;
+		this.distributor = distributor;
 		this.country = country;
 		this.year = year;
 		this.description = description;
+	}
+	
+	public Movie(String name, int duration, String distributor, String country, int year) {
+		super();
+		this.name = name;
+		this.duration = duration;
+		this.distributor = distributor;
+		this.country = country;
+		this.year = year;
 	}
 
 	public int getId() {
@@ -83,12 +92,12 @@ public class Movie {
 		this.duration = duration;
 	}
 
-	public String getDistributer() {
-		return distributer;
+	public String getDistributor() {
+		return distributor;
 	}
 
-	public void setDistributer(String distributer) {
-		this.distributer = distributer;
+	public void setDistributor(String distributor) {
+		this.distributor = distributor;
 	}
 
 	public String getCountry() {

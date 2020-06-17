@@ -17,14 +17,14 @@ public class UserDAO {
 		
 		try {
 			String query = "SELECT Id,Role from Users WHERE Username=? AND Password=? AND Deleted=?";
-			pstmt=conn.prepareStatement(query);
+			pstmt = conn.prepareStatement(query);
 			int index = 1;
 			
 			pstmt.setString(index ++, username);
 			pstmt.setString(index ++, password);
 			Boolean deleted = false;
 			pstmt.setString(index ++, deleted.toString());
-			rset=pstmt.executeQuery();
+			rset = pstmt.executeQuery();
 			
 			if(rset.next()) {
 				int id = rset.getInt(1);
