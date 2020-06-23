@@ -88,4 +88,34 @@ public class UserDAO {
 		return null;
 	}
 	
+	public static boolean addUser(User user) {
+		
+		ConnectionManager.open();
+		Connection conn = ConnectionManager.getConnection();
+		PreparedStatement pstmt = null;
+		
+		try {
+			
+			String query = "INSERT INTO USERS (USERNAME, PASSWORD, REGISTRATIONDATE, ROLE, DELETED) VALUES (?, ?, ?, ?, ?)";
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, user.getUsername());
+			pstmt.setString(2, user.getPassword());
+			pstmt.setString(3, user.getRegistrationDate().toString());
+			pstmt.setString(4, user.getRole().toString());
+			pstmt.setString(5, "false");
+			
+			return pstmt.executeUpdate() == 1;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {pstmt.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {conn.close();} catch (Exception ex1) {ex1.printStackTrace();} 
+		}
+		
+		return false;
+		
+	}
+	
 }
