@@ -25,50 +25,37 @@
     </div>
 
     <div class="container" style="color: rgb(168, 209, 255);">
-        <form action="">
-            <div class="form-group">
-                <label for="movieName">Ime filma:</label>
-                <input type="text" class="form-control" id="movieName" placeholder="ime filma...">
-              </div>
-              <div class="form-group">
-                <label for="director">Reziser: </label>
-                <input type="text" class="form-control" id="director" placeholder="reziser...">
-              </div>
-              <div class="form-group">
-                <label for="actors">Glumci: </label>
-                <input type="text" class="form-control" id="actors" placeholder="glumci...">
-              </div>
-              <div class="form-group">
-                <label for="genre">Zanr: </label>
-                <input type="text" class="form-control" id="genre" placeholder="zanr...">
-              </div>
-              <div class="form-group">
-                <label for="duration">Trajanje: </label>
-                <input type="text" class="form-control" id="duration" placeholder="trajanje...">
-              </div>
-              <div class="form-group">
-                <label for="distributer">Distributer: </label>
-                <input type="text" class="form-control" id="distributer" placeholder="distributer...">
-              </div>
-              <div class="form-group">
-                <label for="country">Zemlja porekla: </label>
-                <input type="text" class="form-control" id="country" placeholder="zemlja porekla...">
-              </div>
-              <div class="form-group">
-                <label for="year">Godina proizvodnje: </label>
-                <input type="text" class="form-control" id="year" placeholder="godina proizvodnje...">
-              </div>
-              <div class="form-group">
-                <label for="description">Opis: </label>
-                <textarea type="text" rows="3" class="form-control" id="description" placeholder="opis..."></textarea>
-              </div>
-              <div class="form-group">
-                <label for="movieImage">Slika:</label>
-                <input type="file" id="movieImage">
-                <p class="help-block">Izaberite naslovnu sliku za film.</p>
-              </div>
+        <form>
+          <p>Ime filma: </p>
+          <input type="text" id="imeFilma" placeholder="ime filma...">
+          <br>
+          <p>Reziser: </p>
+          <input type="text" id="reziser" placeholder="reziser...">
+          <br>
+          <p>Glumci: </p>
+          <input type="text" id="glumci" placeholder="glumci...">
+          <br>
+          <p>Zanr: </p>
+          <input type="text" id="zanr" placeholder="zanr...">
+          <br>
+          <p>Trajanje: </p>
+          <input type="text" id="trajanje" placeholder="trajanje...">
+          <br>
+          <p>Distributer: </p>
+          <input type="text" id="distributer" placeholder="distributer...">
+          <br>
+          <p>Zemlja porekla: </p>
+          <input type="text" id="zemlja" placeholder="zemlja porekla...">
+          <br>
+          <p>Godina proizvodnje: </p>
+          <input type="text" id="godina" placeholder="godina proizvodnje...">
+          <br>
+          <p>Opis: </p>
+          <textarea type="text" rows="3" id="opis" placeholder="opis..."></textarea>
+            
               
-              <button type="submit" class="btn btn-warning" style="float:right">Dodaj</button>
+              
+          <button type="submit" id="dodajFilm" class="btn btn-warning" style="float:right">Dodaj</button>
         </form>
     </div>
 
@@ -109,7 +96,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script src="js/login.js"></script>
+    <script src="js/addMovie.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
     
 </body>

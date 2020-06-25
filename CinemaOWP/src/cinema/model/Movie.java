@@ -7,7 +7,9 @@ public class Movie {
 	public enum Genre{
 		horror, 
 		trailer,
-		action
+		action,
+		romanse,
+		fantasy
 	}
 	
 	private int id;

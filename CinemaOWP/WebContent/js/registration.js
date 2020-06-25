@@ -46,31 +46,9 @@ $(document).ready(function(){
 
             if (data.status == 'success') {
             	
-            	alert('jos malo');
+            	alert('Uspesno ste se registrovali!');
                 
-                $.post('LoginServlet', params, function(data){
-                    if (data.status == 'failure') {
-                        window.location.replace('index.html');
-                        return;
-                    }
-
-                    if (data.status == 'success') {
-                        
-                        $.get('UserServlet', {'action': 'loggedInUser'}, function(data){
-                            if (data.status == 'unauthenticated') {
-                                window.location.replace('index.html');
-                                return;
-                            }
-                            
-                            if (data.loggedInUserRole == 'user') {
-                                window.location.replace('profile.html');
-                            }
-                        });
-
-                    }
-                });
-
-                window.location.replace('Login.html');
+                window.location.replace('index.html');
 
             }
         });

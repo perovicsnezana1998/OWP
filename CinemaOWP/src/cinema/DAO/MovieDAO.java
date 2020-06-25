@@ -58,20 +58,26 @@ public class MovieDAO {
 		
 		try {
 			
-			String query = "SELECT NAME, DURATION, DISTRIBUTOR, COUNTRY, YEAR FROM MOVIES WHERE ID=?";
+			String query = "SELECT * FROM MOVIES WHERE ID=?";
 			pstmt = conn.prepareStatement(query);
 			
 			pstmt.setInt(1, id);
 			rset = pstmt.executeQuery();
 			
 			if (rset.next()) {
-				String name = rset.getString(1);
-				int duration = rset.getInt(2);
-				String distributor = rset.getString(3);
-				String country = rset.getString(4);
-				int year = rset.getInt(5);
+				String name = rset.getString(2);
+				String director= rset.getString(3);
+				String actorsStr = rset.getString(4);
+				ArrayList<String> actors = new ArrayList<String>();
+				actors.add(actorsStr);
+				Movie.Genre genre = Movie.Genre.valueOf(rset.getString(5));
+				int duration = rset.getInt(6);
+				String distributor = rset.getString(7);
+				String country = rset.getString(8);
+				int year = rset.getInt(9);
+				String description = rset.getString(10);
 				
-				Movie movie = new Movie(name, duration, distributor, country, year);
+				Movie movie = new Movie(name, director, actors, genre, duration, distributor, country, year, description);
 				movie.setId(id);
 				
 				return movie;
@@ -82,6 +88,39 @@ public class MovieDAO {
 		}
 		
 		return null;
+	}
+	
+	public static boolean addMovie(Movie movie) {
+		
+		ConnectionManager.open();
+		Connection conn = ConnectionManager.getConnection();
+		PreparedStatement pstmt = null;
+		
+		try {
+			
+			String query = "INSERT INTO MOVIES (NAME, DIRECTOR, ACTORS, GENRE, DURATION, DISTRIBUTOR, COUNTRY, YEAR, DECSCRIPTION) VALUES (?,?,?,?,?,?,?,?,?)";
+			pstmt = conn.prepareStatement(query);
+			
+			pstmt.setString(1, movie.getName());
+			pstmt.setString(2, movie.getDirector());
+			pstmt.setString(3, movie.getActors().toString());
+			pstmt.setString(4, movie.getGenre().toString());
+			pstmt.setInt(5, movie.getDuration());
+			pstmt.setString(6, movie.getDistributor());
+			pstmt.setString(7, movie.getCountry());
+			pstmt.setInt(8, movie.getYear());
+			pstmt.setString(9, movie.getDescription());
+			
+			return pstmt.executeUpdate() == 1;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {pstmt.close();} catch (Exception ex1) {ex1.printStackTrace();}
+			try {conn.close();} catch (Exception ex1) {ex1.printStackTrace();} 
+		}
+		
+		return false;
 	}
 	
 }
